@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CCL</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contactus.css">
+    <!-- Google Fonts Framework -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 4.7.0 Production CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <style>
+        /* Specific layout styling for the About & Contact Page */
+        .about-container {
+            width: 80%;
+            margin: auto;
+            padding: 60px 0;
+        }
+        .about-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .about-col-text {
+            flex-basis: 55%;
+        }
+        .about-col-text h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .about-col-text p {
+            text-align: left;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        .about-col-img {
+            flex-basis: 40%;
+        }
+        .about-col-img img {
+            width: 100%;
+            border-radius: 100px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Values Grid */
+        .values-section {
+            background: #fff3f3;
+            padding: 50px 0;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        .values-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+        }
+        .value-card {
+            flex-basis: 30%;
+            text-align: center;
+            background: #fff;
+            padding: 25px 15px;
+            border-radius: 8px;
+        }
+        .value-card i {
+            font-size: 30px;
+            color: #f44336;
+            margin-bottom: 10px;
+        }
+
+        /* Clean Contact Form Layout */
+        .contact-section {
+            background: #f9f9f9;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .contact-section h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .form-control:focus {
+            border-color: #f44336;
+            outline: none;
+            box-shadow: 0 0 5px rgba(244,67,54,0.2);
+        }
+        .submit-btn {
+            background: #f44336;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background: #d32f2f;
+        }
+
+
+        /* Responsive Breakpoints */
+        @media(max-width: 700px) {
+            .about-row, .values-grid {
+                flex-direction: column;
+            }
+            .about-col-text, .about-col-img, .value-card {
+                flex-basis: 100%;
+            }
+            .contact-section {
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV MENU HEADER -->
+    <!--section class="sub-header" style="background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(IMG-20260106-WA0084.jpg); min-height: 45vh; width: 100%; background-position: center; background-size: cover; position: relative;">
+        <!--nav>
+            <a href="index.html"><img src="IMG-20260825-WA0012.jpg" alt="NSHASA Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="Leaders1.html">Leadership Portal</a></li>
+                    <li><a href="foundation1.html">SHASA Foundation</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1 style="color: #fff; font-size: 40px;">About NSHASA</h1>
+        </div-->
+    </section-->
+
+
+    <!-- HEADER SECTION -->
+    <section class="header">
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img src="IMG-20260825-WA0012.jpg" alt="NSHASA Logo" class="logo-img">
+            </a>
+            
+            <!-- Mobile Menu Control Wrapper Trigger Bars -->
+            <i class="fa fa-bars" id="menuOpenBtn"></i>
+
+            <div class="nav-links" id="navLinks">
+                <!-- Inside Drawer Mobile Dismissal Icon Trigger -->
+                <i class="fa fa-times" id="menuCloseBtn"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-home" style="margin-right:5px;"></i>Home</a></li>
+                    <li><a href="about us.html"><i class="fa fa-users" style="margin-right:5px;"></i>About Us</a></li>
+                    
+                    <li class="has-children" id="dropdownContainer">
+                        <a href="services.html"><i class="fa fa-sitemap" style="margin-right:5px;"></i>Services <i class="fa fa-caret-down" style="margin-left:5px;"></i></a>
+                        <div class="sub-menu-2" id="subMenu">
+                            <ul>
+                                <li><a href="#building-const">Building Construction<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#road-civil">Road and Civil Works<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#renovation-maint">  Renovation and Maintenance<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#fencing-external">Fencing and External Works<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#general-contracting">General Contracting and Support Services <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#"> <i class="fa fa-angle-right"></i></a></li>
+                               
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contactus.html"><i class="fa fa-phone" style="margin-right:5px;"></i>Contact Us</a></li>
+                    <!--li><a href="foundation1.html"><i class="fa fa-heart" style="margin-right:5px;"></i>SHASA Foundation</a></li-->
+                </ul>
+            </div>
+   <div class="text-box">
+            <h1></h1>
+            <!--p>One of the Dynamic and transformative Student Associations</p-->
+            <!--a href="#" class="hero-btn">ABOUT NSHASA</a--->
+        </div>
+</div>
+</div>
+        </nav>
+
+
+<!-- Font Awesome Link (Place this in your <head> or at the top of your body) -->
+<link rel="stylesheet" href="https://cloudflare.com">
+
+<section class="contact-section">
+  <div class="contact-container">
+    <h2>Get in Touch</h2>
+    <p class="contact-subtitle">We would love to hear from you. Please reach out using any of the methods below.</p>
+    
+    <div class="contact-grid">
+  <!-- Location Card -->
+  <div class="contact-card">
+    <div class="icon-wrapper">
+      <!-- Fixed: Changed fa-map-marker-alt to fa-map-marker -->
+      <i class="fa fa-map-marker"></i>
+    </div>
+    <h3>Our Location</h3>
+    <p>East Taraka Street<br>Lae Urban, Morobe Province<br>P.O.Box 93, Lae 2411, Morobe Province, PNG</p>
+  </div>
+
+  <!-- Contact/Phone Card -->
+  <div class="contact-card">
+    <div class="icon-wrapper">
+      <!-- Fixed: Changed fa-phone-alt to fa-phone -->
+      <i class="fa fa-phone"></i>
+    </div>
+    <h3>Call Us</h3>
+    <p>Mon-Fri · 9am - 6pm<br>
+      <a href="tel:+67571996296">+67571996296</a><br> <!-- Added <br> for clean spacing -->
+      <a href="tel:+67571283000">+67571283000</a>
+    </p>
+  </div>
+</div>
+
+      <!-- Email Card -->
+      <div class="contact-card">
+        <div class="icon-wrapper">
+          <i class="fa fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <p>Drop us a line anytime<br><a href="mailto:cleanconstructionlimited@gmail.com">cleanconstructionlimited@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+   
+    <!-- CONTACT FORM SECTION -->
+    <section class="about-container">
+        <div class="contact-section">
+            <h2>Send Us a Message</h2>
+            
+            <!-- Added id="cclContactForm" for the JavaScript to grab -->
+            <form id="cclContactForm" class="contact-form">
+                
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                </div>
+                
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Your Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
+                </div>
+                
+                <!-- Subject Field -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Project Inquiry" required>
+                </div>
+                
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" class="form-control" placeholder="Type your message here..." required></textarea>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- JAVASCRIPT TO BYPASS 405 SERVER BLOCK -->
+    <script>
+        document.getElementById('cclContactForm').addEventListener('submit', function(event) {
+            // 1. Prevent the standard form redirect that causes the 405 error
+            event.preventDefault(); 
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            // 2. Package the form data fields
+            const formData = new FormData(this);
+
+            // 3. Send the request via AJAX directly to the backend handler
+            fetch('https://formbold.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your message has been sent directly to Clean Construction Limited. We will respond shortly.');
+                    document.getElementById('cclContactForm').reset(); // Clear form fields
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                }
+            })
+            .catch(error => {
+                alert('Connection error. Please check your internet connection.');
+            })
+            .finally(() => {
+                submitBtn.innerText = 'Send Message';
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+
+<!-- Footer SECTION -->
+    <footer style="padding: 20px 0; background: #333; color: #fff; text-align: center;">
+        <p>&copy; <span id="year"></span> Clean Construction Limited. All rights reserved.</p>
+    </footer>
+
+    <!-- RESPONSIVE SCRIPT ENGINE -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){ navLinks.style.right = "0"; }
+        function hideMenu(){ navLinks.style.right = "-200px"; }
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

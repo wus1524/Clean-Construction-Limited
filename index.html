@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Construction Limited</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts Framework -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 4.7.0 Production CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+     <!-- HEADER SECTION -->
+    <section class="header">
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img src="IMG-20260825-WA0012.jpg" alt="CCL Logo" class="logo-img">
+            </a>
+            
+            <!-- Mobile Menu Control Wrapper Trigger Bars -->
+            <i class="fa fa-bars" id="menuOpenBtn"></i>
+
+            <div class="nav-links" id="navLinks">
+                <!-- Inside Drawer Mobile Dismissal Icon Trigger -->
+                <i class="fa fa-times" id="menuCloseBtn"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-home" style="margin-right:5px;"></i>Home</a></li>
+                    <li><a href="about us.html"><i class="fa fa-users" style="margin-right:5px;"></i>About Us</a></li>
+                    
+                    <li class="has-children" id="dropdownContainer">
+                        <a href="services.html"><i class="fa fa-sitemap" style="margin-right:5px;"></i>Services <i class="fa fa-caret-down" style="margin-left:5px;"></i></a>
+                        <!-- Submenu injection slot if you choose to deploy dropdown trees here later -->
+                    </li>
+                    
+                    <li><a href="contactus.html"><i class="fa fa-phone" style="margin-right:5px;"></i>Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="text-box">
+            <h1>Clean Construction Limited</h1>
+            <p>Building with Quality, Safety and Trust</p>
+            <a href="services.html" class="hero-btn">Visit Us to Know More</a>
+        </div>
+    </section>
+
+
+    <!-- SUB-ASSOCIATIONS SECTION -->
+    <section class="subass">
+        <h1>Latest News and Updates</h1>
+        <p>Explore More About Clean Construction Limited</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Recruitment</h3>
+                <p></p>
+            </div>
+            <div class="course-col">
+                <h3>New Project</h3>
+                <p>No project availabe.</p>
+            </div>
+            <div class="course-col">
+                <h3>What we Archieve so far</h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMPUS/CONTACT SECTION -->
+    <section class="campus">
+        <h1>Our Chapters</h1>
+        <div class="row">
+            <div class="campus-col">
+                <img src="civilcon.JPG" alt="Goroka Campus">
+                <div class="layer">
+                    <h3>Road and Civil Works</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="buildcon.JPG" alt="NCD Campus">
+                <div class="layer">
+                    <h3>Building Construction</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="renovman.JPG" alt="Team SHASA">
+                <div class="layer">
+                    <h3>Renovation and Maintanance</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; <span id="year"></span> Clean Construction Limited. All rights reserved.</p>
+    </footer>
+
+    <!-- ROBUST SYSTEM FUNCTION SCRIPTS -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        var subMenu = document.getElementById("subMenu");
+        var openBtn = document.getElementById("menuOpenBtn");
+        var closeBtn = document.getElementById("menuCloseBtn");
+        var dropdownBtn = document.getElementById("dropdownContainer");
+        
+        // Clean event listener attachments to guarantee operation inside inspect tools
+        openBtn.addEventListener("click", function() {
+            navLinks.style.right = "0px";
+        });
+        
+        closeBtn.addEventListener("click", function() {
+            navLinks.style.right = "-240px";
+            if(window.innerWidth <= 740) {
+                subMenu.style.display = "none";
+            }
+        });
+
+        dropdownBtn.addEventListener("click", function(event) {
+            if(window.innerWidth <= 740) {
+                event.stopPropagation();
+                if(subMenu.style.display === "block" || subMenu.style.maxHeight) {
+                    subMenu.style.display = "none";
+                    subMenu.style.maxHeight = null;
+                } else {
+                    subMenu.style.display = "block";
+                }
+            }
+        });
+        
+        // Dynamic Automatic Calendar Tracking Initialization
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CCL</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts Framework -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 4.7.0 Production CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cloudflare.com">
+
+
+  
+  <style>
+        /* Specific layout styling for the About & Contact Page */
+        .about-container {
+            width: 80%;
+            margin: auto;
+            padding: 60px 0;
+        }
+        .about-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .about-col-text {
+            flex-basis: 55%;
+        }
+        .about-col-text h2 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .about-col-text p {
+            text-align: left;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+        .about-col-img {
+            flex-basis: 40%;
+        }
+        .about-col-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Values Grid */
+        .values-section {
+            background: #fff3f3;
+            padding: 50px 0;
+            border-radius: 10px;
+            margin-bottom: 60px;
+        }
+        .values-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+        }
+        .value-card {
+            flex-basis: 30%;
+            text-align: center;
+            background: #fff;
+            padding: 25px 15px;
+            border-radius: 8px;
+        }
+        .value-card i {
+            font-size: 30px;
+            color: #f44336;
+            margin-bottom: 10px;
+        }
+
+        /* Clean Contact Form Layout */
+        .contact-section {
+            background: #f9f9f9;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .contact-section h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .form-control:focus {
+            border-color: #f44336;
+            outline: none;
+            box-shadow: 0 0 5px rgba(244,67,54,0.2);
+        }
+        .submit-btn {
+            background: #f44336;
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background: #d32f2f;
+        }
+
+
+        /* Responsive Breakpoints */
+        @media(max-width: 700px) {
+            .about-row, .values-grid {
+                flex-direction: column;
+            }
+            .about-col-text, .about-col-img, .value-card {
+                flex-basis: 100%;
+            }
+            .contact-section {
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV MENU HEADER -->
+    <!--section class="sub-header" style="background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(IMG-20260106-WA0084.jpg); min-height: 45vh; width: 100%; background-position: center; background-size: cover; position: relative;">
+        <!--nav>
+            <a href="index.html"><img src="IMG-20260825-WA0012.jpg" alt="NSHASA Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="Leaders1.html">Leadership Portal</a></li>
+                    <li><a href="foundation1.html">SHASA Foundation</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1 style="color: #fff; font-size: 40px;">About NSHASA</h1>
+        </div-->
+    </section-->
+
+
+    <!-- HEADER SECTION -->
+    <section class="header">
+        <nav>
+            <a href="index.html" class="logo-link">
+                <img src="IMG-20260825-WA0012.jpg" alt="NSHASA Logo" class="logo-img">
+            </a>
+            
+            <!-- Mobile Menu Control Wrapper Trigger Bars -->
+            <i class="fa fa-bars" id="menuOpenBtn"></i>
+
+            <div class="nav-links" id="navLinks">
+                <!-- Inside Drawer Mobile Dismissal Icon Trigger -->
+                <i class="fa fa-times" id="menuCloseBtn"></i>
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-home" style="margin-right:5px;"></i>Home</a></li>
+                    <li><a href="about us.html"><i class="fa fa-users" style="margin-right:5px;"></i>About Us</a></li>
+                    
+                    <li class="has-children" id="dropdownContainer">
+                        <a href="services.html"><i class="fa fa-sitemap" style="margin-right:5px;"></i>Services <i class="fa fa-caret-down" style="margin-left:5px;"></i></a>
+                        <div class="sub-menu-2" id="subMenu">
+                            <ul>
+                                <li><a href="morobe shasa.html">Building Construction<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#">Road and Civil Works<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#">  Renovation and Maintenance<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#">Fencing and External Works<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#">General Contracting and Support Services <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#"> <i class="fa fa-angle-right"></i></a></li>
+                               
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contactus.html"><i class="fa fa-phone" style="margin-right:5px;"></i>Contact Us</a></li>
+                    <!--li><a href="foundation1.html"><i class="fa fa-heart" style="margin-right:5px;"></i>SHASA Foundation</a></li-->
+                </ul>
+            </div>
+   <div class="text-box">
+            <h1></h1>
+            <!--p>One of the Dynamic and transformative Student Associations</p-->
+            <!--a href="#" class="hero-btn">ABOUT NSHASA</a--->
+        </div>
+</div>
+</div>
+        </nav>
+
+
+    <!-- ABOUT CONTENT MAIN CONTAINER -->
+    <section class="about-container">
+        <!-- Vision and Values Row -->
+        <div class="values-section">
+            <h2 style="text-align: center; margin-bottom: 30px; font-size: 26px;">What Drives Us</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fa fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p style="padding:0;">To become a trusted and competitive Papua New Guinea Construction Company recognised for quality workmanship, safety, reliability and its constitution to infrastructure and community development.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p style="padding:0;">To provide reliable, affordable and high-quality construction and maintenance services that meet client exceptations while maintaining strong standards of safety, integrity, professionalism and accountability.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fa fa-gavel"></i>
+                    <h3>Our Core Values</h3>
+                    <p style="padding:0;">Integrity, quality, safety, reliability, accountability, teamwork, respect, professionalism.</p>
+                </div>
+            </div>
+    <!-- Story Row -->
+     <div class="about-row"> 
+  <div class="about-col-text"> 
+    <h2 style="text-align: center; margin-bottom: 30px; font-size: 26px;">Our Story & Purpose</h2> 
+    <p style="text-align: center;">
+      Based in Lae Urban, Morobe Province, Clean Construction Limited was established to provide reliable, professional, and quality construction services throughout Papua New Guinea. We proudly serve government agencies, private companies, resource-sector organizations, churches, educational institutions, communities, and individual clients.
+      <br><br>
+      We provide a broad range of services, including building construction, road and civil works, renovations, fencing, property maintenance, drainage, earthworks, concrete works, and general contracting. 
+      <br><br>
+      Our company is strictly committed to delivering projects according to client requirements. We maintain the highest standards of workmanship, workplace health and safety, environmental responsibility, and professional conduct.
+    </p> 
+  </div>
+</div>
+
+           </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer style="padding: 20px 0; background: #333; color: #fff; text-align: center;">
+        <p>&copy; <span id="year"></span> Clean Construction Limited. All rights reserved.</p>
+    </footer>
+
+    <!-- RESPONSIVE SCRIPT ENGINE -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){ navLinks.style.right = "0"; }
+        function hideMenu(){ navLinks.style.right = "-200px"; }
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
